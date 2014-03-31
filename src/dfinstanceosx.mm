@@ -129,6 +129,11 @@ QString DFInstanceOSX::read_string(const VIRTADDR &addr) {
 }
 
 int DFInstanceOSX::write_string(const VIRTADDR &addr, const QString &str) {
+    //CP437Codec *c = new CP437Codec();
+    //QByteArray buf(256, 0);
+    //buf = c->fromUnicode(str);
+    //return write_raw(addr, sizeof(buf), (void*)&buf);
+    
     Q_UNUSED(addr);
     Q_UNUSED(str);
     return 0;
